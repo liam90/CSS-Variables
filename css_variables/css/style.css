@@ -1,0 +1,92 @@
+/* Define all the Variables for the root element */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;200;300;400&display=swap');
+
+:root {
+  /* Colors */
+  --main__bg__color: #888;
+  --font__color: #333;
+  --header__bg__color: #333;
+  --header__font: #fff;
+  /* Layout */
+  --width: 90%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+  font-family:'Big Shoulders Display', sans-serif;
+  color: var(--font__color);
+  background-color: var(--main__bg__color);
+}
+
+.container {
+  width: var(--width);
+  padding-top: 9rem;
+  margin: 20px auto;
+}
+
+header#main__header {
+  background-color: var(--header__bg__color);
+  color: var(--header__font);
+}
+
+header#main__header h1 {
+  padding: 1rem;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-items: center;
+}
+
+/* Define box vars */
+.box {
+  /* Colors */
+  --box__bg: #ccc;
+  --box__main__color: #06c;
+  /* Spacing */
+  --box__padding: 5px 10px;
+  /* Font */
+  --para__weight: 600; 
+  --font__h2__size: 1.6rem;
+  /* Box Shadow */
+  --box__shadow__h__offset: 10px;
+  --box__shadow__v__offset: 5px;
+  --box__shadow__blur: 5px;
+  /* Border Radius */
+  --box__border_radius: 15px;
+}
+
+.box {
+  background-color: var(--box__bg);
+  padding: var(--box__padding);
+  font-weight: var(--para__weight);
+  border: solid thin var(--box__main__color);
+  border-radius: var(--box__border_radius);
+  box-shadow: var(--box__shadow__h__offset) var(--box__shadow__v__offset) var(--box__shadow__blur) var(--box__main__color);
+}
+
+.box  h2 {
+  background-color: var(--box__main__color);
+  border-radius: 20px;
+  text-align: center;
+  text-shadow: 2px 2px #888;
+  font-size: var(--font__h2__size);
+  color: var(--header__font);
+}
+
+/* Breaks */
+@media (min-width: 1400px) {
+  body {
+    padding: 1rem;
+    margin: 0;
+    line-height: 1.5;
+    font-family:'Big Shoulders Display', sans-serif;
+    color: var(--font__color);
+    background-color: var(--main__bg__color);
+  }
+}
